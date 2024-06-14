@@ -26,5 +26,5 @@ jobs:
         env:
           nugetkey: ${{secrets.NUGETKEY}}
         run: |
-          Rename-Item -Path .\module.psd1 -NewName netmaster.psd1
-          Publish-PSResource -ApiKey $env:nugetkey -Path netmaster.psd1 -Repository PSGallery
+          Rename-Item -Path .\module.psd1 -NewName powershellextension.psd1
+          Publish-PSResource -ApiKey $env:nugetkey -Path powershellextension.psd1 -Repository PSGallery

@@ -1,31 +1,29 @@
-# The readme about yourmodulename
+# The readme about powershellextension
 
-> [!NOTE]
-> Replace `yourmodulename` with the name of the module, and delete this note. change the GUID in the psd1 file as well.
 
 ## Description
 
 
-[![PowerShell Gallery Version](https://img.shields.io/powershellgallery/v/yourmodulename?label=yourmodulename)](https://www.powershellgallery.com/packages/yourmodulename) [![PowerShell Gallery](https://img.shields.io/powershellgallery/dt/yourmodulename)](https://www.powershellgallery.com/packages/yourmodulename) [![](https://img.shields.io/badge/change-logs-blue)](CHANGELOG.md) 
+[![PowerShell Gallery Version](https://img.shields.io/powershellgallery/v/powershellextension?label=powershellextension)](https://www.powershellgallery.com/packages/powershellextension) [![PowerShell Gallery](https://img.shields.io/powershellgallery/dt/powershellextension)](https://www.powershellgallery.com/packages/powershellextension) [![](https://img.shields.io/badge/change-logs-blue)](CHANGELOG.md) 
 
 
 ## Install the module
 
 ```powershell
-Install-Module -Name yourmodulename -Scope CurrentUser
+Install-Module -Name powershellextension -Scope CurrentUser
 
 # or if you want to install the preview version
-Install-Module -Name yourmodulename -Scope CurrentUser -AllowPrerelease
+Install-Module -Name powershellextension -Scope CurrentUser -AllowPrerelease
 ```
 
 ## Update the module
 
 ```powershell
-Update-Module -Name yourmodulename -Scope CurrentUser
+Update-Module -Name powershellextension -Scope CurrentUser
 ```
 
 ## Uninstall the module
 
 ```powershell
-Uninstall-Module -Name yourmodulename -Scope CurrentUser
+Uninstall-Module -Name powershellextension -Scope CurrentUser
 ```
