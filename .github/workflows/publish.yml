@@ -29,5 +29,10 @@ jobs:
           Rename-Item -Path .\module.psd1 -NewName powershellextension.psd1
           Set-PSRepository -Name "PSGallery" -InstallationPolicy Trusted
           $data = Import-PowerShellDataFile .\powershellextension.psd1
-          $data.RequiredModules | Foreach-Object {Install-Module -Name $_.ModuleName -RequiredVersion $_.ModuleVersion }          
+          if($data.RequiredModules) {
+            $data.RequiredModules | Foreach-Object {Install-Module -Name $_.ModuleName -RequiredVersion $_.ModuleVersion }
+          }
+          Remove-Item -Path ".git" -Recurse -Force
+          Remove-Item -Path ".github" -Recurse -Force
+          Remove-Item -Path ".vscode" -Recurse -Force       
           Publish-PSResource -ApiKey $env:nugetkey -Path powershellextension.psd1 -Repository PSGallery

@@ -1,3 +1,4 @@
+$OutputEncoding = [System.Console]::OutputEncoding = [System.Text.Encoding]::UTF8
 
 class RequiredAdministratorAttribute: System.Management.Automation.CmdletBindingAttribute {
     RequiredAdministratorAttribute():base() {
@@ -15,3 +16,5 @@ foreach ($directory in @('Public', 'Private', '.')) {
         Get-ChildItem -Path $path -Filter "*.ps1" | ForEach-Object { . $_.FullName }
     }
 }
+
+$env:AI_INSTRUMENTATION_KEY = "67f501bc-da32-4453-9daa-3c432b8cdfb8"

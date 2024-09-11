@@ -3,7 +3,7 @@
     RootModule           = '.\module.psm1'
 
     # Version number of this module.
-    ModuleVersion        = '0.0.3'
+    ModuleVersion        = '0.0.4'
 
     # Supported PSEditions, change to Core if you just support PowerShell Core.
     CompatiblePSEditions = @("Desktop", "Core")
@@ -57,13 +57,13 @@
     # FormatsToProcess = @()
 
     # Modules to import as nested modules of the module specified in RootModule/ModuleToProcess
-    # NestedModules = @()
+    NestedModules        = @('bin\AppInsights.dll')
 
     # Functions to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no functions to export.
-    FunctionsToExport    = @("Merge-Hashtable", "ConvertTo-Hashtable", "Confirm-DependencyModule","Merge-Object")
+    FunctionsToExport    = @("Merge-Hashtable", "ConvertTo-Hashtable", "Confirm-DependencyModule", "Merge-Object")
 
     # Cmdlets to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no cmdlets to export.
-    CmdletsToExport      = @("Merge-Hashtable", "ConvertTo-Hashtable", "Confirm-DependencyModule","Merge-Object")
+    CmdletsToExport      = @("Merge-Hashtable", "ConvertTo-Hashtable", "Confirm-DependencyModule", "Merge-Object", "Send-AppInsightsTrace")
 
     # Variables to export from this module
     VariablesToExport    = @()
